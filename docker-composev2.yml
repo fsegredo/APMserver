@@ -39,6 +39,8 @@ services:
     command: apm-server -e -strict.perms=false
     environment:
         - output.elasticsearch.hosts=["elasticsearch:9200"]
+    networks:
+    - elastic
 
 networks:
   elastic:
